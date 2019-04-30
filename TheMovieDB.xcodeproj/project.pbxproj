@@ -14,6 +14,8 @@
 		94EDFFA02277DB080029F2AF /* MoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EDFF9F2277DB080029F2AF /* MoviesTableViewController.swift */; };
 		94EDFFA22277DD060029F2AF /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EDFFA12277DD060029F2AF /* MovieTableViewCell.swift */; };
 		94EDFFA42277DDBA0029F2AF /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EDFFA32277DDBA0029F2AF /* Movie.swift */; };
+		94EDFFA62277E1D50029F2AF /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EDFFA52277E1D50029F2AF /* AppConfig.swift */; };
+		94EDFFA82277E2530029F2AF /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EDFFA72277E2530029F2AF /* APIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		94EDFF9F2277DB080029F2AF /* MoviesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewController.swift; sourceTree = "<group>"; };
 		94EDFFA12277DD060029F2AF /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		94EDFFA32277DDBA0029F2AF /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		94EDFFA52277E1D50029F2AF /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		94EDFFA72277E2530029F2AF /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 				94EDFF9B2277D9050029F2AF /* extensions */,
 				94EDFF9A2277D9000029F2AF /* lib */,
 				94EDFF862277D8440029F2AF /* AppDelegate.swift */,
+				94EDFFA52277E1D50029F2AF /* AppConfig.swift */,
 				94EDFF8C2277D8440029F2AF /* Main.storyboard */,
 				94EDFF8F2277D8460029F2AF /* Assets.xcassets */,
 				94EDFF912277D8460029F2AF /* LaunchScreen.storyboard */,
@@ -75,6 +80,7 @@
 		94EDFF9A2277D9000029F2AF /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				94EDFFA72277E2530029F2AF /* APIClient.swift */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -166,9 +172,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				94EDFFA02277DB080029F2AF /* MoviesTableViewController.swift in Sources */,
+				94EDFFA62277E1D50029F2AF /* AppConfig.swift in Sources */,
 				94EDFF872277D8440029F2AF /* AppDelegate.swift in Sources */,
 				94EDFFA42277DDBA0029F2AF /* Movie.swift in Sources */,
 				94EDFFA22277DD060029F2AF /* MovieTableViewCell.swift in Sources */,
+				94EDFFA82277E2530029F2AF /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
