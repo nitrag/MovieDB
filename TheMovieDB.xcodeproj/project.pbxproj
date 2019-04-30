@@ -17,6 +17,7 @@
 		94EDFFA62277E1D50029F2AF /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EDFFA52277E1D50029F2AF /* AppConfig.swift */; };
 		94EDFFA82277E2530029F2AF /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EDFFA72277E2530029F2AF /* APIClient.swift */; };
 		94EDFFAA2277E9610029F2AF /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EDFFA92277E9610029F2AF /* CustomTabBarController.swift */; };
+		94EDFFAC2277F1700029F2AF /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EDFFAB2277F1700029F2AF /* Storyboarded.swift */; };
 		DF390CDB48B55C92C8601A7D /* Pods_TheMovieDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF5AE554CF7AF3C89208C81 /* Pods_TheMovieDB.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		94EDFFA52277E1D50029F2AF /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		94EDFFA72277E2530029F2AF /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		94EDFFA92277E9610029F2AF /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		94EDFFAB2277F1700029F2AF /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		E7BF8A5DDD6A56F80CE90152 /* Pods-TheMovieDB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheMovieDB.debug.xcconfig"; path = "Target Support Files/Pods-TheMovieDB/Pods-TheMovieDB.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +108,7 @@
 		94EDFF9B2277D9050029F2AF /* extensions */ = {
 			isa = PBXGroup;
 			children = (
+				94EDFFAB2277F1700029F2AF /* Storyboarded.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				94EDFFA42277DDBA0029F2AF /* Movie.swift in Sources */,
 				94EDFFA22277DD060029F2AF /* MovieTableViewCell.swift in Sources */,
 				94EDFFA82277E2530029F2AF /* APIClient.swift in Sources */,
+				94EDFFAC2277F1700029F2AF /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

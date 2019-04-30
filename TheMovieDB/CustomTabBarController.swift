@@ -15,25 +15,25 @@ class CustomTabBarController: UITabBarController {
         
         let nowPlayingNav = UINavigationController()
         nowPlayingNav.tabBarItem = UITabBarItem(title: MovieDBCategory.NowPlaying.rawValue, image: nil, selectedImage: nil)
-        let nowPlayingVC = MoviesTableViewController()
+        let nowPlayingVC = MoviesTableViewController.instantiate()
         nowPlayingVC.category = .NowPlaying
         nowPlayingNav.addChild(nowPlayingVC)
         
         let popularNav = UINavigationController()
         popularNav.tabBarItem = UITabBarItem(title: MovieDBCategory.Popular.rawValue, image: nil, selectedImage: nil)
-        let popularVC = MoviesTableViewController()
+        let popularVC = MoviesTableViewController.instantiate()
         popularVC.category = .Popular
         popularNav.addChild(popularVC)
 
         let topNav = UINavigationController()
         topNav.tabBarItem = UITabBarItem(title: MovieDBCategory.TopRated.rawValue, image: nil, selectedImage: nil)
-        let topVC = MoviesTableViewController()
+        let topVC = MoviesTableViewController.instantiate()
         topVC.category = .TopRated
         topNav.addChild(topVC)
         
         let upcomingNav = UINavigationController()
         upcomingNav.tabBarItem = UITabBarItem(title: MovieDBCategory.Upcoming.rawValue, image: nil, selectedImage: nil)
-        let upcomingVC = MoviesTableViewController()
+        let upcomingVC = MoviesTableViewController.instantiate()
         upcomingVC.category = .Upcoming
         upcomingNav.addChild(upcomingVC)
         // Do any additional setup after loading the view.

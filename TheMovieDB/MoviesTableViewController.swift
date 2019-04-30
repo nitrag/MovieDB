@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MoviesTableViewController: UITableViewController {
+class MoviesTableViewController: UITableViewController, Storyboarded {
     
     var movies = [Movie]() {
         didSet {
@@ -16,37 +16,33 @@ class MoviesTableViewController: UITableViewController {
         }
     }
 
-    
+    let cellId = "movieCell"
     var category: MovieDBCategory = .NowPlaying
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.register(MovieTableViewCell.self, forCellReuseIdentifier: "movieCell")
-
-        self.title = category.rawValue
-        self.navigationController?.title = category.rawValue
         
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.loadMovies()
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 120
+        
+        title = category.rawValue
+        navigationController?.title = category.rawValue
+        
+        loadMovies()
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return movies.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath) as! MovieTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! MovieTableViewCell
         cell.setup(movies[indexPath.row])
         return cell
     }

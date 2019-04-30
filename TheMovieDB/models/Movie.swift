@@ -19,8 +19,8 @@ struct Movie: Codable {
     var voteCount: Int
     var popularity: Double
     
-    func getURL() -> URL {
-        return URL(string: "http://image.tmdb.org/t/p/w185/\(posterPath)")!
+    func getImageURL() -> URL {
+        return URL(string: "https://image.tmdb.org/t/p/w185/\(posterPath)")!
     }
     
     private enum CodingKeys: String, CodingKey {

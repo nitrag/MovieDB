@@ -43,7 +43,7 @@ class APIClient: NSObject {
                 return URL(string: apiURL + "movie/upcoming" + apiCreds)!
             }
         }()
-        print("Fetching \(url)")
+        //print("Fetching \(url)")
         Alamofire.request(url).responseDecodableObject(keyPath: "results", decoder: self.defaultDecoder) { (response: DataResponse<[Movie]>) in
             let movies = response.result.value
             if let movies = movies {

@@ -13,7 +13,7 @@ struct AppConfig {
     
     struct API {
         static let movieAPIURL = "https://api.themoviedb.org/3/"
-        static let movieImageBaseURL = "http://image.tmdb.org/t/p/w185/"
+        static let movieImageBaseURL = "https://image.tmdb.org/t/p/w185/"
     }
     
     struct Keys {
