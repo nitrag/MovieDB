@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -86,52 +87,55 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="movieCell" rowHeight="125" id="TMs-Xg-goh" customClass="MovieTableViewCell" customModule="TheMovieDB" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="125"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="movieCell" rowHeight="163" id="TMs-Xg-goh" customClass="MovieTableViewCell" customModule="TheMovieDB" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="163"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TMs-Xg-goh" id="Eg1-ci-skb">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="124.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="162.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ndl-Al-umg">
-                                            <rect key="frame" x="16" y="8" width="100" height="100"/>
+                                            <rect key="frame" x="8" y="31.5" width="100" height="100"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="100" id="MCv-zz-62r"/>
                                                 <constraint firstAttribute="height" constant="100" id="Xsz-8t-L96"/>
                                             </constraints>
                                         </imageView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PL9-v4-WJm">
-                                            <rect key="frame" x="132" y="16" width="227" height="92.5"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="PL9-v4-WJm">
+                                            <rect key="frame" x="116" y="8" width="243" height="146.5"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jK5-KM-Hd4">
-                                                    <rect key="frame" x="0.0" y="0.0" width="87" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Movie Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jK5-KM-Hd4">
+                                                    <rect key="frame" x="0.0" y="0.0" width="87" height="42.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a long overview of the movie and what it is all about." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.65000000000000002" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dth-UF-dkz">
-                                                    <rect key="frame" x="0.0" y="30" width="203" height="38"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="This is a long overview of the movie and what it is all about." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dth-UF-dkz">
+                                                    <rect key="frame" x="0.0" y="44.5" width="236" height="63.5"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WzM-mw-MKu">
-                                                    <rect key="frame" x="0.0" y="76" width="36.5" height="16.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WzM-mw-MKu">
+                                                    <rect key="frame" x="0.0" y="110" width="37.5" height="36.5"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="13"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="ndl-Al-umg" firstAttribute="top" secondItem="Eg1-ci-skb" secondAttribute="top" constant="8" id="0VB-Bh-izq"/>
+                                        <constraint firstItem="ndl-Al-umg" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Eg1-ci-skb" secondAttribute="top" constant="8" id="0VB-Bh-izq"/>
+                                        <constraint firstItem="PL9-v4-WJm" firstAttribute="centerY" secondItem="Eg1-ci-skb" secondAttribute="centerY" id="4An-9N-Kk7"/>
                                         <constraint firstAttribute="trailing" secondItem="PL9-v4-WJm" secondAttribute="trailing" constant="16" id="5sD-Yz-AfG"/>
-                                        <constraint firstAttribute="bottom" secondItem="PL9-v4-WJm" secondAttribute="bottom" constant="16" id="HCZ-0j-cyM"/>
-                                        <constraint firstItem="ndl-Al-umg" firstAttribute="leading" secondItem="Eg1-ci-skb" secondAttribute="leading" constant="16" id="KIA-0B-ju9"/>
-                                        <constraint firstItem="PL9-v4-WJm" firstAttribute="leading" secondItem="ndl-Al-umg" secondAttribute="trailing" constant="16" id="e3Q-Mh-zha"/>
-                                        <constraint firstItem="PL9-v4-WJm" firstAttribute="top" secondItem="Eg1-ci-skb" secondAttribute="top" constant="16" id="hT9-a9-ZQ4"/>
-                                        <constraint firstAttribute="bottom" secondItem="ndl-Al-umg" secondAttribute="bottom" constant="8" id="zmV-pi-H8K"/>
+                                        <constraint firstItem="ndl-Al-umg" firstAttribute="leading" secondItem="Eg1-ci-skb" secondAttribute="leading" constant="8" id="KIA-0B-ju9"/>
+                                        <constraint firstItem="ndl-Al-umg" firstAttribute="centerY" secondItem="Eg1-ci-skb" secondAttribute="centerY" id="OfI-gX-xBS"/>
+                                        <constraint firstItem="ndl-Al-umg" firstAttribute="centerY" secondItem="Eg1-ci-skb" secondAttribute="centerY" id="aTZ-95-1zr"/>
+                                        <constraint firstItem="PL9-v4-WJm" firstAttribute="top" secondItem="Eg1-ci-skb" secondAttribute="top" constant="8" id="blf-i0-oBY"/>
+                                        <constraint firstItem="PL9-v4-WJm" firstAttribute="leading" secondItem="ndl-Al-umg" secondAttribute="trailing" constant="8" id="e3Q-Mh-zha"/>
+                                        <constraint firstAttribute="bottom" secondItem="PL9-v4-WJm" secondAttribute="bottom" constant="8" id="tBJ-Gd-xsI"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ndl-Al-umg" secondAttribute="bottom" constant="8" id="zmV-pi-H8K"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -152,6 +156,73 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="py7-jf-h1P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="893.60000000000002" y="-39.130434782608695"/>
+        </scene>
+        <!--Movie View Controller-->
+        <scene sceneID="BaX-xH-r7P">
+            <objects>
+                <viewController storyboardIdentifier="MovieViewController" id="MqH-ff-fzA" customClass="MovieViewController" customModule="TheMovieDB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0WL-cZ-6T9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gjb-un-Lnd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="225"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="225" id="Wna-zU-1Dl"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="3Yc-xe-Tms">
+                                <rect key="frame" x="14" y="245" width="349" height="321"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="v9b-eD-0BW">
+                                        <rect key="frame" x="0.0" y="0.0" width="349" height="82.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="How to Train your Dragon: The Hidden World" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06S-GG-Orq">
+                                                <rect key="frame" x="0.0" y="0.0" width="214.5" height="82.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Release Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iy9-4a-2gq">
+                                                <rect key="frame" x="254" y="0.0" width="95" height="82.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIM-bR-x4U">
+                                        <rect key="frame" x="0.0" y="97.5" width="349" height="223.5"/>
+                                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Gjb-un-Lnd" firstAttribute="top" secondItem="UT8-3y-xWa" secondAttribute="top" id="8Qk-YJ-VhD"/>
+                            <constraint firstAttribute="trailing" secondItem="3Yc-xe-Tms" secondAttribute="trailing" constant="12" id="Nn5-Rl-hds"/>
+                            <constraint firstItem="3Yc-xe-Tms" firstAttribute="leading" secondItem="UT8-3y-xWa" secondAttribute="leading" constant="14" id="VnY-qE-svn"/>
+                            <constraint firstItem="Gjb-un-Lnd" firstAttribute="trailing" secondItem="UT8-3y-xWa" secondAttribute="trailing" id="iW1-Te-p6m"/>
+                            <constraint firstItem="Gjb-un-Lnd" firstAttribute="leading" secondItem="UT8-3y-xWa" secondAttribute="leading" id="lUA-Qn-hg0"/>
+                            <constraint firstItem="3Yc-xe-Tms" firstAttribute="top" secondItem="Gjb-un-Lnd" secondAttribute="bottom" constant="20" id="ycX-te-bEP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UT8-3y-xWa"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="backdropImageView" destination="Gjb-un-Lnd" id="hfb-bN-7nt"/>
+                        <outlet property="movieDescription" destination="tIM-bR-x4U" id="MkK-3w-f05"/>
+                        <outlet property="movieTitle" destination="06S-GG-Orq" id="Wqz-8c-vg7"/>
+                        <outlet property="releaseLabel" destination="iy9-4a-2gq" id="VhT-VE-pZN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GC7-tg-Niy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1791.2" y="-39.130434782608695"/>
         </scene>
         <!--Custom Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

@@ -61,4 +61,13 @@ class MoviesTableViewController: UITableViewController, Storyboarded {
             self.movies += movies
         }
     }
+    
+    
+    //MARK: - Interaction
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let movieVC = MovieViewController.instantiate()
+        movieVC.movie = movies[indexPath.row]
+        self.navigationController?.pushViewController(movieVC, animated: true)
+    }
 }
