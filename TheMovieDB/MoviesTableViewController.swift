@@ -10,12 +10,27 @@ import UIKit
 
 class MoviesTableViewController: UITableViewController {
     
-    var movies = [Movie]()
+    var movies = [Movie]() {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
 
+    
+    var category: MovieDBCategory = .NowPlaying
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.register(MovieTableViewCell.self, forCellReuseIdentifier: "movieCell")
 
+        self.title = category.rawValue
+        self.navigationController?.title = category.rawValue
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.loadMovies()
     }
 
     // MARK: - Table view data source
@@ -39,8 +54,15 @@ class MoviesTableViewController: UITableViewController {
     
     // MARK: - Implementation
     
-    func loadMovies(type: MovieDBCategory) {
-        //API Call
-        //RELAOD Data
+    func loadMovies() {
+        print("Loading movies for \(self.category)")
+        APIClient.shared.getMovies(self.category) { movies, error in
+            if let error = error {
+                print("There was an error loading movies! ")
+                print(error)
+                return
+            }
+            self.movies += movies
+        }
     }
 }

@@ -7,11 +7,12 @@
 //
 
 import Foundation
+import Alamofire
 
 struct AppConfig {
     
     struct API {
-        static let movieAPIURL = "https://api.themoviedb.org/"
+        static let movieAPIURL = "https://api.themoviedb.org/3/"
         static let movieImageBaseURL = "http://image.tmdb.org/t/p/w185/"
     }
     
@@ -19,11 +20,13 @@ struct AppConfig {
         static let movieAPIKey = "dd62d037d39dba18b847d32ac5aee13a"
     }
     
+    
+    
 }
 
-enum MovieDBCategory {
-    case NowPlaying
-    case Popular
-    case TopRated
-    case Upcoming
+enum MovieDBCategory: String {
+    case NowPlaying = "Now Playing"
+    case Popular = "Popular"
+    case TopRated = "Top Rated"
+    case Upcoming = "Upcoming"
 }

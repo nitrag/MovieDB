@@ -7,6 +7,9 @@
 //
 
 import Foundation
+import Alamofire
+import CodableAlamofire
+
 
 class APIClient: NSObject {
     
@@ -18,8 +21,36 @@ class APIClient: NSObject {
     private override init() {}
 
     let apiURL = AppConfig.API.movieAPIURL
-    let apiKey = "?api_key=\(AppConfig.Keys.movieAPIKey)"
+    let apiCreds = "?api_key=\(AppConfig.Keys.movieAPIKey)"
     let imageURL = AppConfig.API.movieImageBaseURL
     
+    lazy var defaultDecoder: JSONDecoder = {
+        let decoder = JSONDecoder()
+        //decoder.dateDecodingStrategy = .iso8601
+        return decoder
+    }()
     
+    func getMovies(_ category: MovieDBCategory, completion: @escaping ([Movie], Error?) -> Void) {
+        let url = { () -> URL in
+            switch category {
+            case .NowPlaying:
+                return URL(string: apiURL + "movie/now_playing" + apiCreds)!
+            case .Popular:
+                return URL(string: apiURL + "movie/popular" + apiCreds)!
+            case .TopRated:
+                return URL(string: apiURL + "movie/top_rated" + apiCreds)!
+            case .Upcoming:
+                return URL(string: apiURL + "movie/upcoming" + apiCreds)!
+            }
+        }()
+        print("Fetching \(url)")
+        Alamofire.request(url).responseDecodableObject(keyPath: "results", decoder: self.defaultDecoder) { (response: DataResponse<[Movie]>) in
+            let movies = response.result.value
+            if let movies = movies {
+                completion(movies, nil)
+            }else{
+                completion([Movie](), response.result.error)
+            }
+        }
+    }
 }

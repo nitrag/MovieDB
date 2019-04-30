@@ -134,8 +134,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="imageView" destination="ndl-Al-umg" id="cPf-kY-zij"/>
-                                    <outlet property="movieDescription" destination="WzM-mw-MKu" id="9ci-6B-ykJ"/>
+                                    <outlet property="movieDescription" destination="dth-UF-dkz" id="uWk-nw-ECX"/>
                                     <outlet property="movieImageView" destination="ndl-Al-umg" id="ebD-yq-F9e"/>
                                     <outlet property="movieRating" destination="WzM-mw-MKu" id="cEK-nl-T9m"/>
                                     <outlet property="movieTitle" destination="jK5-KM-Hd4" id="gKZ-Ia-EdP"/>
@@ -153,10 +152,10 @@
             </objects>
             <point key="canvasLocation" x="893.60000000000002" y="-39.130434782608695"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Custom Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController storyboardIdentifier="tab" id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tab" id="49e-Tb-3d3" customClass="CustomTabBarController" customModule="TheMovieDB" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -175,6 +174,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="E8l-Of-yRO"/>
+        <segue reference="Pfq-qC-2t9"/>
     </inferredMetricsTieBreakers>
 </document>
