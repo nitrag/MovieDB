@@ -9,16 +9,18 @@
 import UIKit
 
 class MovieTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var movieImageView: UIImageView!
+    @IBOutlet weak var movieTitle: UILabel!
+    @IBOutlet weak var movieDescription: UILabel!
+    @IBOutlet weak var movieRating: UILabel!
+    
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func setup(_ movie: Movie){
+        self.movieTitle.text = movie.title
+        //self.movieImageView.sd
+        self.movieDescription.text = movie.overview
+        self.movieRating.text = "\(movie.voteAverage)/10 (\(movie.voteCount))"
     }
 
 }

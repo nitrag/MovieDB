@@ -133,6 +133,13 @@
                                         <constraint firstItem="ndl-Al-umg" firstAttribute="centerY" secondItem="Eg1-ci-skb" secondAttribute="centerY" id="i2u-xq-NYx"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageView" destination="ndl-Al-umg" id="cPf-kY-zij"/>
+                                    <outlet property="movieDescription" destination="WzM-mw-MKu" id="9ci-6B-ykJ"/>
+                                    <outlet property="movieImageView" destination="ndl-Al-umg" id="ebD-yq-F9e"/>
+                                    <outlet property="movieRating" destination="WzM-mw-MKu" id="cEK-nl-T9m"/>
+                                    <outlet property="movieTitle" destination="jK5-KM-Hd4" id="gKZ-Ia-EdP"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
